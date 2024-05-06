@@ -33,9 +33,3 @@ The focus of this project is to study/practice Kubernetes and also provide anoth
     ```
 
 ### 3. Checking the application (TODO) 
-
-
-Generating Cachet APP_KEY:
-- kubectl exec -it cachet-deployment-58f7bdd8ff-zx4nq -- php artisan key:generate --show
-
-After generating the APP_KEY, insert it on the config map value, apply ConfigMap chenges and restart the deployment.
