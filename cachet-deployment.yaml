@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cachet-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: cachet
+      labels:
+        app: cachet
+    spec:
+      containers:
+      - name: cachet
+        image: cachethq/docker:2.3.18
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: cachet-configmap
+        resources: {}
+  selector:
+    matchLabels:
+      app: cachet

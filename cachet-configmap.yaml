@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cachet-configmap
+data:
+  DB_DRIVER: "null"
+  DB_HOST: "null"
+  DB_PORT: "null"
+  DB_DATABASE: "null"
+  DB_USERNAME: "null"
+  DB_PASSWORD: "null"
+  DB_PREFIX: chq_
+  APP_KEY: "null"
+  APP_LOG: errorlog
+  APP_ENV: production
+  APP_DEBUG: "false"
